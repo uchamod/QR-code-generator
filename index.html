@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR code generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <h1>QR code Generatar</h1>
+    </header>
+    <!-- main section -->
+    <main class="main">
+      <div class="gif">
+        <img src="./assets/qr-image.gif" alt="QR-code gif" />
+      </div>
+      <div class="form-section">
+        <div class="intro">
+            <h2>QR code Generatar</h2>
+            <p>
+              QR Codes allow smartphone users to access your website simply and
+              quickly.
+            </p>
+            <p>
+              Enter your URL below to generate a QR Code and download the image.
+            </p>
+        </div>
+       
+        <form action="" class="form">
+          <input type="url" id="qrurl" class="inputurl" placeholder="Enter the URL" />
+          <select id="size" class="size" name="size">
+            <option value="100">100*100</option>
+            <option value="200">200*200</option>
+            <option value="300" selected>300*300</option>
+            <option value="400">400*400</option>
+            <option value="500">500*500</option>
+            <option value="600">600*600</option>
+            <option value="700">700*700</option>
+          </select>
+          <button class="gen-btn" id="btn" type="submit">
+            Generate QR Code
+          </button>
+        </form>
+      </div>
+    </main>
+    <!-- qr loading section -->
+    <div id="QR-code"></div>
+  </body>
+</html>
