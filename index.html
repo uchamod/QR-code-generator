@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR code generator</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -19,18 +26,23 @@
       </div>
       <div class="form-section">
         <div class="intro">
-            <h2>QR code Generatar</h2>
-            <p>
-              QR Codes allow smartphone users to access your website simply and
-              quickly.
-            </p>
-            <p>
-              Enter your URL below to generate a QR Code and download the image.
-            </p>
+          <h2>QR code Generatar</h2>
+          <p>
+            QR Codes allow smartphone users to access your website simply and
+            quickly.
+          </p>
+          <p>
+            Enter your URL below to generate a QR Code and download the image.
+          </p>
         </div>
-       
-        <form action="" class="form">
-          <input type="url" id="qrurl" class="inputurl" placeholder="Enter the URL" />
+
+        <form action="" id="form">
+          <input
+            type="url"
+            id="qrurl"
+            class="inputurl"
+            placeholder="Enter the URL"
+          />
           <select id="size" class="size" name="size">
             <option value="100">100*100</option>
             <option value="200">200*200</option>
@@ -47,6 +59,11 @@
       </div>
     </main>
     <!-- qr loading section -->
-    <div id="QR-code"></div>
+    <div id="QR-code">
+      <!-- spiner -->
+      <div class="loader" id="spinner"></div>
+      <!-- QR code -->
+      <div id="qrcode"></div>
+    </div>
   </body>
 </html>

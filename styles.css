@@ -3,14 +3,17 @@
 body{
     font-family: "Noto Sans";
     box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
 }
 
 header{
     background-color: rgb(74, 74, 249);
-  max-width: 1000px;
-  max-height: 80px;
-   margin-inline: auto;
-   padding: 5px;
+ 
+  margin-inline: auto;
+  
+   padding:2px 5px;
    text-align: center;
    color: aliceblue;
 }
@@ -39,7 +42,7 @@ form{
     flex-direction: column;
 }
 .inputurl{
-    padding: 0.5rem;
+    padding: 0.8rem;
     font-size: 16;
     border-radius: 30;
    border: 2px solid #5052525d;
@@ -47,11 +50,31 @@ form{
 }
 
 .size{
-    padding: 0.5rem;
+    padding: 0.8rem;;
     font-size: 16;
     border-radius: 30;
     border: 2px solid #5052525d;
    
+}
+#QR-code{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+    flex-direction: column;
+}
+.download-btn{
+    display: block;
+    
+    text-align: center;
+    padding:1rem;
+    font-size: 16;
+    width: 15%;
+    background-color: orangered;
+ color: #f3f3f3;
+
+ margin: 1rem;
+ text-decoration: none;
 }
 
 .gen-btn{
@@ -64,3 +87,34 @@ form{
     text-align: center;
     border-radius: 30;
 }
+
+.loader{
+    margin: 10px auto;
+    width: 3rem;
+    height: 3rem;
+    border: 1rem solid #f3f3f3;
+    border-top: 1rem solid #3498db;
+    border-radius: 50%;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #qrcode{
+    margin: auto;
+    max-width: 1200px;
+    width: max-content;
+  }
+
+/* responsive design */
+@media screen and (max-width: 600px) {
+    main {
+      flex-direction: column;
+    }
+  }
